@@ -30,6 +30,7 @@ func help() {
 	fmt.Println("\t-e - Set mode to encode")
 	fmt.Println("\t-i filepath - input file")
 	fmt.Println("\t-o filepath - redirects stdout to file")
+	fmt.Println("\t-h - help")
 }
 
 func main() {
@@ -54,6 +55,9 @@ ARGS:
 			args.HasOutputFile = true
 			args.OutputFile = os.Args[i+1]
 			i += 1
+		case "-h":
+			help()
+			return
 		default:
 			args.Text = os.Args[i]
 			break ARGS
