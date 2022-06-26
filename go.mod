@@ -1,4 +1,4 @@
-module joshua/green/gobencode/cli
+module joshua/green/gobencode/goben
 
 go 1.18
 
