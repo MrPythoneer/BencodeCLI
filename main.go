@@ -3,8 +3,9 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	gobencode "joshua/green/bencode"
 	"os"
+
+	gobencode "github.com/MrPythoneer/GoBencode"
 )
 
 type Operation byte
@@ -24,7 +25,7 @@ type Arguments struct {
 }
 
 func help() {
-	fmt.Println("gobencode [-e | -d [-i input_file]] [-o output_file] [text]")
+	fmt.Println("goben [-e | -d [-i input_file]] [-o output_file] [text]")
 	fmt.Println("\t-d - Set mode to decode")
 	fmt.Println("\t-e - Set mode to encode")
 	fmt.Println("\t-i filepath - input file")
